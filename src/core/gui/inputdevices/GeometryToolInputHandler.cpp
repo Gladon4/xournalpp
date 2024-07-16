@@ -136,6 +136,7 @@ auto GeometryToolInputHandler::keyPressed(KeyEvent const& event) -> bool {
     double ydir = 0;
     double angle = 0.0;
     double scale = 1.0;
+    
     switch (event.keyval) {
         case GDK_KEY_Left:
             xdir = -1;
@@ -161,6 +162,9 @@ auto GeometryToolInputHandler::keyPressed(KeyEvent const& event) -> bool {
         case GDK_KEY_S:
             scale = (event.state & GDK_MOD1_MASK) ? 1. / SCALE_AMOUNT_SMALL : 1. / SCALE_AMOUNT;
             break;
+        case GDK_KEY_a:
+            controller->setAngleDiaglog();
+            return true;
         case GDK_KEY_m:
             controller->markPoint(translationX, translationY);
             return true;

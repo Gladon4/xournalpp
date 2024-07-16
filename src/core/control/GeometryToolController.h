@@ -64,6 +64,11 @@ public:
     void markPoint(double x, double y);
 
     /**
+     * @brief opens dialoge and sets angle to user input number
+     */
+    void setAngleDiaglog();
+
+    /**
      * @brief adds the stroke to the layer and rerenders the stroke area
      */
     void addStrokeToLayer();

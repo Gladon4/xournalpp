@@ -77,6 +77,13 @@ void GeometryToolController::markPoint(double x, double y) {
     view->rerenderRect(rect.x, rect.y, rect.width, rect.height);
 }
 
+void GeometryToolController::setAngleDiaglog() {
+    double angleDest = 3.1415 * 60.5 / 180.0;
+
+    geometryTool->setRotation(angleDest);
+    geometryTool->notify();
+}
+
 void GeometryToolController::addStrokeToLayer() {
     const auto xournal = view->getXournal();
     const auto control = xournal->getControl();
